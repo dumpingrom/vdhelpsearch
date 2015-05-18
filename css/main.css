@@ -1,0 +1,78 @@
+/*.topic-nav {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: transparent;
+	cursor: pointer;
+}*/
+
+.topic {
+	cursor: pointer;
+	transition: all 150ms ease-out 50ms;
+}
+
+.topic md-grid-tile-footer {
+	background: rgba(0, 0, 0, 0.68);
+}
+
+md-grid-list {
+	margin: 8px;
+	width: 70%;
+}
+
+md-grid-tile p {
+	width: 80%;
+}
+
+md-grid-tile {
+}
+
+#listResults {
+	min-width: 40%;
+	border: 1px solid rgb(0,188,212);
+	opacity: 1;
+}
+
+#listResults.ng-hide {
+	opacity: 0;
+}
+
+#listResults.ng-hide-add.ng-hide-add-active,
+#listResults.ng-hide-remove.ng-hide-remove-active {
+	-webkit-transition: all ease-out 0.3s;
+	transition: all ease-out 0.3s;
+}
+
+
+#listResults a {
+	color: inherit;
+	text-decoration: none;
+	text-align: left;
+  	min-width: 100%;
+  	text-transform: none;
+}
+
+#listResults md-divider {
+	margin-top: 10px;
+	margin-bottom: 10px; 
+}
+
+#listResults .md-2-line {
+	-webkit-transition: all 150ms ease-out 100ms !important;
+	transition: all 150ms ease-out 100ms !important;
+}
+
+.pdfIcon {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	max-width:            24px;
+	max-height:           24px;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAuQAAALkB4qdB6AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFJSURBVEiJtda/K/9RFMfxhx8pg/JJkZD6isUmKRHxByhltJi/i8VgVGaZLUoyGQ0Gi02KgTJYyCLfxY9Biq9rcJRQn/c77/ep0/vcd/e+nufcH90LFSzjBqkgvwnNigiKEv7qyzVBa1WO/asJUhZ7xb0oO6vV5ug7iREclgG4TSntoxu7ZQAu43v3KS4U8LFOxxjIA/gYXM3/o5JSgoOMYxJS1gpq0RXxSRkVnEX2Xd63aZ5Tn6nTAoZwhHrMFgl4RhvWo70Y1WwWBdhACx6j/YShgExgHMOY+ZREZsBjzPsKLrAWQpWUkoC0x78F9GE7K+AZ8yHSET6FJewEcAvT+INGDOI6C+AcoyHeg6sci1p1ivbQiznvOybXwaoGeEAn5tEQ0/Eb8W+A08i6Dn/x8lvATxfOAZrQrwAr/cqsQzPGSgKsUvKz5Q1hoEcAG8MSOAAAAABJRU5ErkJggg5edea01638a55b817fc27b41e607d2b1');
+	float: left;
+	margin: 22px 13px;
+}
