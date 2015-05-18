@@ -35,34 +35,54 @@
 				<input type="text" ng-model="searchInput" ng-focus="toggleFocus()" ng-blur="toggleFocus()">
 			</md-input-container>
 			<md-list ng-show="searchInput && focus == 1" id="listResults">
-				<md-subheader class="md-no-sticky">Articles</md-subheader>
-				<md-list-item class="md-2-line" 
-					ng-repeat="item in items | filter:{type:'article'} | filter:searchInput" 
-					ng-class="{'md-whiteframe-z3': hover}" 
-					ng-mouseenter="hover=true" 
-					ng-mouseleave="hover=false">
-					<a ng-href="{{item.url}}">
-						<div class="md-list-item-text">
-							<h3>{{item.title}}</h3>
-							<p>{{item.description}}</p>
-						</div>
-					</a>
-				</md-list-item>
-				<md-divider ></md-divider>
-				<md-subheader class="md-no-sticky">Docs</md-subheader>
-				<md-list-item class="md-2-line" 
-					ng-repeat="item in items | filter:{type:'doc'} | filter:searchInput"
-					ng-class="{'md-whiteframe-z3': hover}" 
-					ng-mouseenter="hover=true" 
-					ng-mouseleave="hover=false">
-					<a ng-href="{{item.url}}">
-					<span class="pdfIcon" alt="PDF"></span>
-						<div class="md-list-item-text">
-							<h3>{{item.title}}</h3>
-							<p>{{item.description}}</p>
-						</div>
-					</a>
-				</md-list-item>
+				<div class="resultsType">
+					<md-subheader class="md-no-sticky">Articles</md-subheader>
+					<md-list-item class="md-2-line" 
+						ng-repeat="item in items | filter:{type:'article'} | filter:searchInput" 
+						ng-class="{'md-whiteframe-z3': hover}" 
+						ng-mouseenter="hover=true" 
+						ng-mouseleave="hover=false">
+						<a ng-href="{{item.url}}">
+							<div class="md-list-item-text">
+								<h3>{{item.title}}</h3>
+								<p>{{item.description}}</p>
+							</div>
+						</a>
+					</md-list-item>
+				</div>
+
+				<div class="resultsType">
+					<md-subheader class="md-no-sticky">Docs</md-subheader>
+					<md-list-item class="md-2-line" 
+						ng-repeat="item in items | filter:{type:'doc'} | filter:searchInput"
+						ng-class="{'md-whiteframe-z3': hover}" 
+						ng-mouseenter="hover=true" 
+						ng-mouseleave="hover=false">
+						<a ng-href="{{item.url}}">
+						<span class="pdfIcon" alt="PDF"></span>
+							<div class="md-list-item-text">
+								<h3>{{item.title}}</h3>
+								<p>{{item.description}}</p>
+							</div>
+						</a>
+					</md-list-item>
+				</div>
+				<div class="resultsType">
+					<md-subheader class="md-no-sticky">Media</md-subheader>
+					<md-list-item class="md-2-line" 
+						ng-repeat="item in items | filter:{type:'media'} | filter:searchInput"
+						ng-class="{'md-whiteframe-z3': hover}" 
+						ng-mouseenter="hover=true" 
+						ng-mouseleave="hover=false">
+						<a ng-href="{{item.url}}">
+						<span class="pdfIcon" alt="PDF"></span>
+							<div class="md-list-item-text">
+								<h3>{{item.title}}</h3>
+								<p>{{item.description}}</p>
+							</div>
+						</a>
+					</md-list-item>
+				</div>
 			</md-list>
 			<!--<md-grid-list
 			md-cols-sm="1" md-cols-md="3" md-cols-gt-md="9"
