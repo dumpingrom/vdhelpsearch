@@ -40,7 +40,6 @@ md-grid-tile {
 	z-index: 999999999999;
 	position: fixed;
 	background-color: #fff;
-
 }
 
 #listResults.ng-hide {

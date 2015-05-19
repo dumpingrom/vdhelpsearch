@@ -34,6 +34,32 @@
 				<label>Search</label>
 				<input type="text" ng-model="searchInput" ng-focus="toggleFocus()" ng-blur="toggleFocus()">
 			</md-input-container>
+			
+			<!--<md-grid-list
+			md-cols-sm="1" md-cols-md="3" md-cols-gt-md="9"
+	        md-row-height-gt-md="1:1" md-row-height="2:2"
+	        md-gutter="12px" md-gutter-gt-sm="8px">
+				<md-grid-tile 
+					md-rowspan="2"
+					md-colspan="3"
+					md-colspan-sm="1"
+					ng-repeat="step in steps | filter:searchInput | offset:currentPage*itemsPerPage | limitTo: itemsPerPage"
+					class="topic md-whiteframe-z1" 
+					ng-class="{'md-whiteframe-z5': hover}"
+					ng-mouseenter="hover = true" 
+					ng-mouseleave="hover = false">
+					<p ng-model="step.text" ng-change="steps.$save(step)">{{step.text}}</p>
+					<md-grid-tile-footer>
+						<h3 ng-model="step.title" ng-change="steps.$save(step)">{{step.title}}</h3>
+					</md-grid-tile-footer>
+				</md-grid-tile>
+			<md-grid-list>
+			<div ng-hide="true">
+				<md-button class="topic-nav md-raised" id="prevPage" ng-disabled="disablePrevPage()" ng-click="prevPage()">PREV</md-button>
+				<md-button class="topic-nav md-raised" id="nextPage" ng-disabled="disableNextPage()" ng-click="nextPage()">NEXT</md-button>
+			</div>-->
+		</md-content>
+		<md-content id="list">
 			<md-list ng-show="searchInput && focus == 1" id="listResults">
 				<div class="resultsType">
 					<md-subheader class="md-no-sticky">Articles</md-subheader>
@@ -102,30 +128,7 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
 			</div>
-			<!--<md-grid-list
-			md-cols-sm="1" md-cols-md="3" md-cols-gt-md="9"
-	        md-row-height-gt-md="1:1" md-row-height="2:2"
-	        md-gutter="12px" md-gutter-gt-sm="8px">
-				<md-grid-tile 
-					md-rowspan="2"
-					md-colspan="3"
-					md-colspan-sm="1"
-					ng-repeat="step in steps | filter:searchInput | offset:currentPage*itemsPerPage | limitTo: itemsPerPage"
-					class="topic md-whiteframe-z1" 
-					ng-class="{'md-whiteframe-z5': hover}"
-					ng-mouseenter="hover = true" 
-					ng-mouseleave="hover = false">
-					<p ng-model="step.text" ng-change="steps.$save(step)">{{step.text}}</p>
-					<md-grid-tile-footer>
-						<h3 ng-model="step.title" ng-change="steps.$save(step)">{{step.title}}</h3>
-					</md-grid-tile-footer>
-				</md-grid-tile>
-			<md-grid-list>
-			<div ng-hide="true">
-				<md-button class="topic-nav md-raised" id="prevPage" ng-disabled="disablePrevPage()" ng-click="prevPage()">PREV</md-button>
-				<md-button class="topic-nav md-raised" id="nextPage" ng-disabled="disableNextPage()" ng-click="nextPage()">NEXT</md-button>
-			</div>-->
-		<md-content>
+		</md-content>
 	</div>
 </body>
 <script type="text/javascript">
