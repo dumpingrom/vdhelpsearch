@@ -6,8 +6,6 @@
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.0/angular-material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
 	<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
@@ -23,41 +21,10 @@
 			</div>
 		</md-toolbar>
 		<md-content layout="column" layout-align="space-around center">
-			<div ng-show="false">
-				<span>Login as admin</span><br>
-				<input type="text" ng-model="email"><br>
-				<input type="password" ng-model="password"><br>
-				<button ng-click="loginAsAdmin(email, password)">Login</button>
-			</div>
-			<br>
 			<md-input-container style="width:20%">
 				<label>Search</label>
 				<input type="text" ng-model="searchInput" ng-focus="toggleFocus()" ng-blur="toggleFocus()">
 			</md-input-container>
-			
-			<!--<md-grid-list
-			md-cols-sm="1" md-cols-md="3" md-cols-gt-md="9"
-	        md-row-height-gt-md="1:1" md-row-height="2:2"
-	        md-gutter="12px" md-gutter-gt-sm="8px">
-				<md-grid-tile 
-					md-rowspan="2"
-					md-colspan="3"
-					md-colspan-sm="1"
-					ng-repeat="step in steps | filter:searchInput | offset:currentPage*itemsPerPage | limitTo: itemsPerPage"
-					class="topic md-whiteframe-z1" 
-					ng-class="{'md-whiteframe-z5': hover}"
-					ng-mouseenter="hover = true" 
-					ng-mouseleave="hover = false">
-					<p ng-model="step.text" ng-change="steps.$save(step)">{{step.text}}</p>
-					<md-grid-tile-footer>
-						<h3 ng-model="step.title" ng-change="steps.$save(step)">{{step.title}}</h3>
-					</md-grid-tile-footer>
-				</md-grid-tile>
-			<md-grid-list>
-			<div ng-hide="true">
-				<md-button class="topic-nav md-raised" id="prevPage" ng-disabled="disablePrevPage()" ng-click="prevPage()">PREV</md-button>
-				<md-button class="topic-nav md-raised" id="nextPage" ng-disabled="disableNextPage()" ng-click="nextPage()">NEXT</md-button>
-			</div>-->
 		</md-content>
 		<md-content id="list">
 			<md-list ng-show="searchInput && focus == 1" id="listResults">
@@ -110,24 +77,6 @@
 					</md-list-item>
 				</div>
 			</md-list>
-			<div>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</div>
 		</md-content>
 	</div>
 </body>
